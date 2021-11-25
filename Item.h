@@ -10,7 +10,7 @@ protected:
     string color;
     float price;
     int stock;
-    int id = 0;
+    int id = 42;
 
 public:
     Item(): size(0), color(""), price(0.0), stock(0){};

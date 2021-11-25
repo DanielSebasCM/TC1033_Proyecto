@@ -4,6 +4,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
+
 #include "Shirt.h"
 #include "Hoodie.h"
 #include "Jean.h"
@@ -30,14 +31,12 @@ public:
     Store();
     Store(float , float );
 
-    bool sell(Item , int );
-    bool refund(Item , int );
+    bool sell(Item& , int );
+    bool refund(Item& , int );
 
-    bool check_finances();
-
-    bool add_item(Shirt );
-    bool add_item(Hoodie );
-    bool add_item(Jean );
+    bool add_item(Shirt& );
+    bool add_item(Hoodie& );
+    bool add_item(Jean& );
 
      // Accessors methods
     float get_income();
@@ -45,10 +44,10 @@ public:
     float get_tax();
     float get_tax_rate();
     Shirt * get_shirts();
-    Hoodie * get_hoodie();
+    Hoodie * get_hoodies();
     Jean * get_jeans();
     int get_i_shirts();
-    int get_i_hoodie();
+    int get_i_hoodies();
     int get_i_jeans();
 
     void set_income(float );
@@ -64,17 +63,15 @@ Store::Store(){
     tax_rate = 0.12;
 }
 
-Store::Store(float inc, float tx_rt){
+Store::Store(float bal, float tx_rt){
     
-    income = inc;
+    balance = bal;
     tax_rate = tx_rt;
-    tax = income * tax_rate;
-    balance = income - tax;
 
 }
 
-// reduce el stock del item y actualiza el balance, tax y income dependiendo de su precio
-bool Store::sell(Item itm, int n){
+// Reduce el stock del item y actualiza el balance, tax y income dependiendo de su precio
+bool Store::sell(Item &itm, int n){
     
     int stock = itm.get_stock();
     float price = itm.get_price();
@@ -89,17 +86,17 @@ bool Store::sell(Item itm, int n){
         income += price * n; 
         tax += price * n * tax_rate;
         balance += price * n - price * n * tax_rate;
-        cout << "Venta existosa\n";
+        cout << "Venta existosa\n \n";
         return true;
     }
 
     else
-        cout << "Stock insuficiente\n";
+        cout << "Stock insuficiente\n \n";
         return false;
 }
 
 // Aumenta el stock del item retornado y actualiza las finanzas
-bool Store::refund(Item itm, int n){
+bool Store::refund(Item &itm, int n){
 
     int stock = itm.get_stock();
     float price = itm.get_price();
@@ -115,35 +112,41 @@ bool Store::refund(Item itm, int n){
     return true;
 }
 
-// Verifica que no existan errores en los datos financieros
-// Si no los hay regresa true, en otro caso false
-bool Store::check_finances(){
-    if (income == balance + tax)
+// Añade items a su correspondiente array
+bool Store::add_item(Shirt &itm){
+        if (i_shirts < max_items){
+            shirts[i_shirts] = itm;
+            shirts[i_shirts].set_id(i_shirts);
+            i_shirts++;
+            return true;
+        }
+        else
+            cout << "No se pudo agregar, maximo de items alcanzado\n\n";
+            return false;
+}
+
+bool Store::add_item(Hoodie &itm){
+        if (i_hoodies < max_items){
+        hoodies[i_hoodies] = itm;
+        hoodies[i_hoodies].set_id(i_hoodies);
+        i_hoodies++;
         return true;
+    }
     else
+        cout << "No se pudo agregar, maximo de items alcanzado\n\n";
         return false;
 }
 
-// Añade items a su correspondiente array
-bool Store::add_item(Shirt itm){
-    shirts[i_shirts] = itm;
-    itm.set_id(i_shirts);
-    i_shirts++;
-    return true;
-}
-
-bool Store::add_item(Hoodie itm){
-    hoodies[i_hoodies] = itm;
-    itm.set_id(i_hoodies);
-    i_hoodies++;
-    return true;
-}
-
-bool Store::add_item(Jean itm){
-    jeans[i_jeans] = itm;
-    itm.set_id(i_jeans);
-    i_jeans++;
-    return true;
+bool Store::add_item(Jean &itm){
+        if (i_jeans < max_items){
+        jeans[i_jeans] = itm;
+        jeans[i_jeans].set_id(i_jeans);
+        i_jeans++;
+        return true;
+    }
+    else
+        cout << "No se pudo agregar, maximo de items alcanzado\n\n";
+        return false;
 }
 
 float Store::get_income(){
@@ -166,7 +169,7 @@ Shirt * Store::get_shirts(){
     return shirts;
 }
 
-Hoodie * Store::get_hoodie(){
+Hoodie * Store::get_hoodies(){
     return hoodies;
 }
 
@@ -178,7 +181,7 @@ int Store::get_i_shirts(){
     return i_shirts;
 }
 
-int Store::get_i_hoodie(){
+int Store::get_i_hoodies(){
     return i_hoodies;
 }
 
