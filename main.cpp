@@ -1,6 +1,7 @@
 #include <iostream>
 #include <string>
 using namespace std;
+
 #include "Store.h"
 
 void report(Store );
@@ -46,7 +47,6 @@ int main(){
     cout << "Se cierra el dia con: \n";
 
     report(mi_tienda);
-
 }
 void report(Store store){
     // Muestra todas las camisas y sus atributos
@@ -77,4 +77,6 @@ void report(Store store){
     cout << "Ingresos: " << store.get_income() << "\n";
     cout << "Balance despues de impuestos: " << store.get_balance() << "\n";
     cout << "impuestos: " << store.get_tax() << "\n\n";
+
+
 }

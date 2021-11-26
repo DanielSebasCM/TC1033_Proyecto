@@ -3,6 +3,7 @@
 
 #include <iostream>
 #include <string>
+#include <typeinfo>
 using namespace std;
 
 #include "Shirt.h"
@@ -86,7 +87,7 @@ bool Store::sell(Item &itm, int n){
         income += price * n; 
         tax += price * n * tax_rate;
         balance += price * n - price * n * tax_rate;
-        cout << "Venta existosa\n \n";
+        cout << "Venta existosa por " << itm.get_price() * n << " pesos\n \n";
         return true;
     }
 
@@ -109,6 +110,7 @@ bool Store::refund(Item &itm, int n){
     tax -= price * n * tax_rate;
     balance -= price * n - price * n * tax_rate;
 
+    cout << "Reembolso de " << itm.get_price() * n << " pesos\n \n";
     return true;
 }
 
@@ -116,7 +118,6 @@ bool Store::refund(Item &itm, int n){
 bool Store::add_item(Shirt &itm){
         if (i_shirts < max_items){
             shirts[i_shirts] = itm;
-            shirts[i_shirts].set_id(i_shirts);
             i_shirts++;
             return true;
         }
@@ -128,7 +129,6 @@ bool Store::add_item(Shirt &itm){
 bool Store::add_item(Hoodie &itm){
         if (i_hoodies < max_items){
         hoodies[i_hoodies] = itm;
-        hoodies[i_hoodies].set_id(i_hoodies);
         i_hoodies++;
         return true;
     }
@@ -140,7 +140,6 @@ bool Store::add_item(Hoodie &itm){
 bool Store::add_item(Jean &itm){
         if (i_jeans < max_items){
         jeans[i_jeans] = itm;
-        jeans[i_jeans].set_id(i_jeans);
         i_jeans++;
         return true;
     }

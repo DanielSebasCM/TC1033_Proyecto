@@ -10,7 +10,6 @@ protected:
     string color;
     float price;
     int stock;
-    int id = 42;
 
 public:
     Item(): size(0), color(""), price(0.0), stock(0){};
@@ -25,13 +24,11 @@ public:
     string get_color();
     int get_stock();
     float get_price();
-    int get_id();
 
     void set_size(int );
     void set_color(string );
     void set_stock(int );
     void set_price(float );
-    void set_id(int );
 };
 
 //Getter
@@ -51,10 +48,6 @@ float Item::get_price(){
     return price;
 }
 
-int Item::get_id(){
-    return id;
-}
-
 //Setter
 void Item::set_size(int sz){
     size = sz;
@@ -72,7 +65,4 @@ void Item::set_price(float pr){
     price = pr;
 }
 
-void Item::set_id(int i){
-    id = i;
-}
 #endif
