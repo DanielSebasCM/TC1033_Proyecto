@@ -7,7 +7,8 @@ También se podrá registrar ventas y retornos de ítems y automáticamente actu
 Corrección:
 
 Estoy pidiendo revisión del avance 2 de UML. Lo que pasó es que me olvidé de subir el link de la actividad a canvas pero el diagrama si lo realicé. Hago la entrega ahora en corrección ya con el diagrama actualizado a lo que voy de avance con mi proyecto.
-
 Las subcompetencias que aplican son : SICT0302A, Diseño clases sencillas completas (con todos los atributos y métodos requeridos), Modelo un diagrama de clase útil para solucionar un problema utilizando UML. Utilizo el concepto de herencia en el diagrama de clases de manera adecuada.
 
-también pido revisión de la siguiente subcompetencia: SICT0401A, Cumplo con estándares en mi repositorio: tiene un readme claro que explica el proyecto  (para que sirve,  para que no sirve y como se usa), no tiene archivos basura o versiones. Expandí mi Readme para que sea más comprensivo.
+También pido revisión de la siguiente subcompetencia: SICT0401A, Cumplo con estándares en mi repositorio: tiene un readme claro que explica el proyecto  (para que sirve,  para que no sirve y como se usa), no tiene archivos basura o versiones. Expandí mi Readme para que sea más comprensivo.
+
+También pido correciñon del avance 3, Si está incluido agrgación en mi UML. Agregué mas comentarios y corregí errores en el formato de mi código. Con las sub competencias: SICT0302A, Utilizo el concepto de composición (o agreagación) en el diagrama de clases. SICT0401A, Sigo estándares en todo mi código fuente: estilo, sangrías, comentarios, nombres, etc.
