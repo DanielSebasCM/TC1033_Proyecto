@@ -11,4 +11,6 @@ Las subcompetencias que aplican son : SICT0302A, Diseño clases sencillas comple
 
 También pido revisión de la siguiente subcompetencia: SICT0401A, Cumplo con estándares en mi repositorio: tiene un readme claro que explica el proyecto  (para que sirve,  para que no sirve y como se usa), no tiene archivos basura o versiones. Expandí mi Readme para que sea más comprensivo.
 
-También pido correciñon del avance 3, Si está incluido agrgación en mi UML. Agregué mas comentarios y corregí errores en el formato de mi código. Con las sub competencias: SICT0302A, Utilizo el concepto de composición (o agreagación) en el diagrama de clases. SICT0401A, Sigo estándares en todo mi código fuente: estilo, sangrías, comentarios, nombres, etc.
+También pido corrección del avance 3, Si está incluido agregación en mi UML. Agregué más comentarios y corregí errores en el formato de mi código. Con las sub-competencias: SICT0302A, Utilizo el concepto de composición (o agregación) en el diagrama de clases. SICT0401A, Sigo estándares en todo mi código fuente: estilo, sangrías, comentarios, nombres, etc. Como comentario dice que está mal hecho el modelo, sin más detalles. Pero la base de como diseñé la parte de herencia fue con las actividades en clase.
+
+
