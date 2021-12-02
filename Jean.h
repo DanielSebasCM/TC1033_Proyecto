@@ -1,5 +1,3 @@
-//Daniel Cajas A01708637
-
 #ifndef _JEAN_H_
 #define _JEAN_H_
 
@@ -8,11 +6,15 @@ using namespace std;
 
 #include "Item.h"
 
+// Clase Jean que hereda de Item, con el atributo extra waist
+
 class Jean : public Item{
 private:
-    int waist;
+    int waist; // Waist representa el ancho de cintura del Jean
 
 public:
+
+    // Constructores
     Jean() : Item(){
         waist = 0;
     }
@@ -25,6 +27,7 @@ public:
         waist = wt;
     }
 
+    // Accesors methods
     int get_waist();
 
     void set_waist(int );

@@ -1,5 +1,3 @@
-//Daniel Cajas A01708637
-
 #ifndef _HOODIE_H_
 #define _HOODIE_H_
 
@@ -8,11 +6,16 @@ using namespace std;
 
 #include "Item.h"
 
+// Clase Hoodie que hereda de Item, con el atributo extra zipper
+
 class Hoodie : public Item{
 private:
-    bool zipper;
+
+    bool zipper; // Zipper representa si el hoodie tiene cremallera o no
 
 public:
+
+    // Constructores
     Hoodie() : Item(){
         zipper = 0;
     }

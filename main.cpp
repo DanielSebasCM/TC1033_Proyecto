@@ -1,5 +1,3 @@
-//Daniel Cajas A01708637
-
 #include <iostream>
 #include <string>
 using namespace std;

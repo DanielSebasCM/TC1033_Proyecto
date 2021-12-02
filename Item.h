@@ -1,20 +1,22 @@
-//Daniel Cajas A01708637
-
 #ifndef _ITEM_H_
 #define _ITEM_H_
 
 #include <string>
 using namespace std;
 
+// Clase Item padre del resto de items. 
 class Item{
 protected:
-    int size;
-    string color;
-    float price;
-    int stock;
+    int size; // Talla del item
+    string color; // Color del item
+    float price; // Precio del item
+    int stock; // Cuanto de este item esta en stock
 
 public:
+
+    // Constructores
     Item(): size(0), color(""), price(0.0), stock(0){};
+
     Item(int sz, string cl, float pr, int stck){
         size = sz;
         color = cl;
@@ -22,6 +24,7 @@ public:
         stock = stck;
     };
 
+    // Accesors methods
     int get_size();
     string get_color();
     int get_stock();

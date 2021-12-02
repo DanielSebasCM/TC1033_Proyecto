@@ -1,5 +1,3 @@
-//Daniel Cajas A01708637
-
 #ifndef _SHIRT_H_
 #define _SHIRT_H_
 
@@ -8,11 +6,15 @@ using namespace std;
 
 #include "Item.h"
 
+// Clase Shirt que hereda de Item, con el atributo extra pattern
+
 class Shirt : public Item{
 private:
-    string pattern;
+    string pattern; // Pattern representa el patrón de la camisa. Ejm. cuadros, rayas, plano, etc.
 
 public:
+
+    // Constructores
     Shirt() : Item(){
         pattern = "";
     }
@@ -25,6 +27,7 @@ public:
         pattern = pt;
     }
 
+    // Accesors methods
     string get_pattern();
 
     void set_pattern(string );

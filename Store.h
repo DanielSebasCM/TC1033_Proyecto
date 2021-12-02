@@ -1,5 +1,3 @@
-//Daniel Cajas A01708637
-
 #ifndef _STORE_H_
 #define _STORE_H_
 
@@ -11,6 +9,8 @@ using namespace std;
 #include "Shirt.h"
 #include "Hoodie.h"
 #include "Jean.h"
+
+// Clase Store que maneja el stock de la tienda y las finanzas
 
 class Store{
 private:
@@ -31,12 +31,15 @@ private:
     int i_jeans = 0;
 
 public:
+
+    // Constructores
     Store();
     Store(float , float );
 
-    bool sell(Item& , int );
-    bool refund(Item& , int );
+    bool sell(Item& , int ); // Reduce el stock del item y actualiza el balance, tax y income dependiendo de su precio
+    bool refund(Item& , int ); // Aumenta el stock del item retornado y actualiza las finanzas
 
+    // Añade items a su correspondiente array
     bool add_item(Shirt& );
     bool add_item(Hoodie& );
     bool add_item(Jean& );
@@ -59,6 +62,7 @@ public:
     void set_tax_rate(float );
 };
 
+// Constructores
 Store::Store(){
     income = 0.0;
     balance = 0.0;
